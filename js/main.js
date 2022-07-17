@@ -115,3 +115,9 @@ const validarCampos = () => {
         window.location.href = "http://127.0.0.1:5500/user.html"
     }
 };
+
+/* let x;
+fetch('https://pokeapi.co/api/v2/pokemon')
+  .then((response) => response.json())
+  .then((json) => x = (json));
+console.log(x); */
