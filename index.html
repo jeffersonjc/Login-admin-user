@@ -1,88 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar sesión</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="container">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Iniciar sesión</title>
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="container">
+			<!-- Formulario Iniciar sesión -->
+			<form action="" class="form" id="login">
+				<h1 class="form__title">Iniciar sesión</h1>
+				<p>A continuación ingrese sus datos:</p>
+				<div class="form_input_group">
+					<input
+						type="text"
+						name=""
+						id="idUsuarioInicio"
+						class="form_input"
+						autofocus
+						placeholder="Usuario"
+					/>
+					<div id="error-usuario-inicio" class="form_input_error_msg"></div>
+				</div>
+				<div class="form_input_group">
+					<input
+						type="password"
+						name=""
+						id="pwUsuarioInicio"
+						class="form_input"
+						autofocus
+						placeholder="Contraseña"
+					/>
+					<div id="error-pw-inicio" class="form_input_error_msg"></div>
+				</div>
+				<button class="form_button form_button_bg" type="submit">
+					Iniciar sesión
+				</button>
+				<p class="form_txt">
+					<a href="./" id="enlace-recuperar-pw-1" class="form_link"
+						>¿Olvidaste la contraseña?</a
+					>
+				</p>
+				<p class="form_txt">
+					<a href="./" id="enlace-crear-cuenta-1" class="form_link"
+						>Crear cuenta</a
+					>
+				</p>
+			</form>
 
-        <!-- Formulario Iniciar sesión -->
-        <form action="" class="form" id="login">
-            <h1 class="form__title">Iniciar sesión</h1>
-            <p>A continuación ingrese sus datos:</p>
-            <div class="form_input_group">
-                <input type="text" name="" id="idUsuarioInicio" class="form_input" autofocus placeholder="Usuario">
-                <div id="error-usuario-inicio" class="form_input_error_msg"></div>
-            </div>
-            <div class="form_input_group">
-                <input type="password" name="" id="pwUsuarioInicio" class="form_input" autofocus placeholder="Contraseña">
-                <div id="error-pw-inicio" class="form_input_error_msg"></div>
-            </div>
-            <button class="form_button form_button_bg" type="submit">Iniciar sesión</button>
-            <p class="form_txt">
-                <a href="./" id="enlace-recuperar-pw-1" class="form_link">¿Olvidaste la contraseña?</a>
-            </p>
-            <p class="form_txt">
-                <a href="./" id="enlace-crear-cuenta-1" class="form_link">Crear cuenta</a>
-            </p>
-        </form>
+			<!-- Formulario olvidaste contraseña -->
+			<form action="" class="form form_hidden" id="recuperar-pw">
+				<h1 class="form__title">Recuperar contraseña</h1>
+				<p>Datos de usuario:</p>
+				<div class="form_msg form_msg_error"></div>
+				<div class="form_input_group">
+					<input
+						type="text"
+						name=""
+						id="idUsuarioPw"
+						class="form_input"
+						autofocus
+						placeholder="Usuario"
+					/>
+					<div class="form_input_error_msg">
+						<!-- Usuario no existe en nuestra base de datos -->
+					</div>
+				</div>
+				<button class="form_button form_button_bg" type="submit">
+					Enviar correo
+				</button>
+				<p class="form_txt">
+					<a href="./" id="iniciar-sesion-1" class="form_link"
+						>Iniciar sesión</a
+					>
+				</p>
+				<p class="form_txt">
+					<a href="./" id="enlace-crear-cuenta-2" class="form_link"
+						>Crear cuenta</a
+					>
+				</p>
+			</form>
 
-        <!-- Formulario olvidaste contraseña -->
-        <form action="" class="form form_hidden" id="recuperar-pw">
-            <h1 class="form__title">Recuperar contraseña</h1>
-            <p>Datos de usuario:</p>
-            <div class="form_msg form_msg_error"></div>
-            <div class="form_input_group">
-                <input type="text" name="" id="idUsuarioPw" class="form_input" autofocus placeholder="Usuario">
-                <div class="form_input_error_msg"><!-- Usuario no existe en nuestra base de datos --></div>
-            </div>
-            <button class="form_button form_button_bg" type="submit">Enviar correo</button>
-            <p class="form_txt">
-                <a href="./" id="iniciar-sesion-1" class="form_link">Iniciar sesión</a>
-            </p>
-            <p class="form_txt">
-                <a href="./" id="enlace-crear-cuenta-2" class="form_link">Crear cuenta</a>
-            </p>
-        </form>
+			<!-- Formulario Crear cuenta -->
+			<form action="" class="form form_hidden" id="crear-cuenta">
+				<h1 class="form__title">Crear cuenta</h1>
+				<p>A continuación ingrese sus datos:</p>
+				<div class="form_msg form_msg_error"></div>
+				<div class="form_input_group">
+					<input
+						type="text"
+						name=""
+						id="idUsuarioCrear"
+						class="form_input"
+						autofocus
+						placeholder="Usuario"
+					/>
+					<div class="form_input_error_msg"><!-- Incorrecto --></div>
+				</div>
+				<div class="form_input_group">
+					<input
+						type="text"
+						name=""
+						id="idCorreoEl"
+						class="form_input"
+						autofocus
+						placeholder="Correo electrónico"
+					/>
+					<div class="form_input_error_msg"><!-- Correo inválido --></div>
+				</div>
+				<div class="form_input_group">
+					<input
+						type="password"
+						name=""
+						id="idPasswordCrear"
+						class="form_input"
+						autofocus
+						placeholder="Contraseña"
+					/>
+					<div class="form_input_error_msg"></div>
+				</div>
+				<div class="form_input_group">
+					<input
+						type="password"
+						name=""
+						id="idPasswordCrearConfirma"
+						class="form_input"
+						autofocus
+						placeholder="Confirmar contraseña"
+					/>
+					<div class="form_input_error_msg">
+						<!-- Contraseña no coincide -->
+					</div>
+				</div>
+				<button class="form_button form_button_bg" type="submit">
+					Continuar
+				</button>
+				<p class="form_txt">
+					<a href="./" id="iniciar-sesion-2" class="form_link"
+						>¿Ya tienes cuenta? Inicia sesión</a
+					>
+				</p>
+				<p class="form_txt">
+					<a href="./" id="enlace-recuperar-pw-2" class="form_link"
+						>¿Olvidaste la contraseña?</a
+					>
+				</p>
+			</form>
+		</div>
 
-        <!-- Formulario Crear cuenta -->
-        <form action="" class="form form_hidden" id="crear-cuenta">
-            <h1 class="form__title">Crear cuenta</h1>
-            <p>A continuación ingrese sus datos:</p>
-            <div class="form_msg form_msg_error"></div>
-            <div class="form_input_group">
-                <input type="text" name="" id="idUsuarioCrear" class="form_input" autofocus placeholder="Usuario">
-                <div class="form_input_error_msg"><!-- Incorrecto --></div>
-            </div>
-            <div class="form_input_group">
-                <input type="text" name="" id="idCorreoEl" class="form_input" autofocus placeholder="Correo electrónico">
-                <div class="form_input_error_msg"><!-- Correo inválido --></div>
-            </div>
-            <div class="form_input_group">
-                <input type="password" name="" id="idPasswordCrear" class="form_input" autofocus placeholder="Contraseña">
-                <div class="form_input_error_msg"></div>
-            </div>
-            <div class="form_input_group">
-                <input type="password" name="" id="idPasswordCrearConfirma" class="form_input" autofocus placeholder="Confirmar contraseña">
-                <div class="form_input_error_msg"><!-- Contraseña no coincide --></div>
-            </div>
-            <button class="form_button form_button_bg" type="submit">Continuar</button>
-            <p class="form_txt">
-                <a href="./" id="iniciar-sesion-2" class="form_link">¿Ya tienes cuenta? Inicia sesión</a>
-            </p>
-            <p class="form_txt">
-                <a href="./" id="enlace-recuperar-pw-2" class="form_link">¿Olvidaste la contraseña?</a>
-            </p>
-        </form>
-    </div>
-    
-    <script src="./js/main.js"></script>
-</body>
+		<script src="./js/main.js"></script>
+	</body>
 </html>

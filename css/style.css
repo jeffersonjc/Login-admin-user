@@ -1,133 +1,158 @@
 body {
-    /* Estilos globales */
-    --color-success: #4bb544;
-    --color-error: #cc3333;
-    --color-link: #191919;
-    --border-radius: 8px;
+	/* Estilos globales */
+	--color-success: #4bb544;
+	--color-error: #cc3333;
+	--color-link: #191919;
+	--border-radius: 8px;
 
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    color: #191919;
+	margin: 0;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 14px;
+	color: #191919;
 }
 
 .container {
-    width: 400px;
-    max-width: 400px;
-    margin: 1rem;
-    padding: 2rem;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
-    border-radius: var(--border-radius);
-    background: white;
+	width: 400px;
+	max-width: 400px;
+	margin: 1rem;
+	padding: 2rem;
+	box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+	border-radius: var(--border-radius);
+	background: white;
 }
 
 .form_hidden {
-    display: none;
+	display: none;
 }
 
-.container, .form_input, .form_button {
-    font-family: 'Lato', sans-serif;
+.container,
+.form_input,
+.form_button {
+	font-family: "Lato", sans-serif;
 }
 
 small {
-    letter-spacing: 0.05rem;
+	letter-spacing: 0.05rem;
 }
 
 /* Eliminar espacios arriba y abajo en el formulario */
 .form > *:first-child {
-    margin-top: 0px;
+	margin-top: 0px;
 }
 
 .form > *:last-child {
-    margin-bottom: 0px;
+	margin-bottom: 0px;
 }
 
 .form_msg {
-    text-align: center;
-    margin-bottom: 1rem;
+	text-align: center;
+	margin-bottom: 1rem;
 }
 
 .form_msg_success {
-    color: var(--color-success)
+	color: var(--color-success);
 }
 
 .form_msg_error {
-    color: var(--color-error)
+	color: var(--color-error);
 }
 
 .form_input_group {
-    margin-bottom: 0.5rem;
+	margin-bottom: 0.5rem;
 }
 
 .form_input {
-    display: block;
-    width: 100%;
-    padding: 0.5rem;
-    box-sizing: border-box;
-    border-radius: var(--border-radius);
-    border: 1px solid #dddddd;
-    outline: none;
-    background: #eeeeee;
-    transition: background 0.2s border-color 0.2s;
+	display: block;
+	width: 100%;
+	padding: 0.5rem;
+	box-sizing: border-box;
+	border-radius: var(--border-radius);
+	border: 1px solid #dddddd;
+	outline: none;
+	background: #eeeeee;
+	transition: background 0.2s border-color 0.2s;
 }
 
 .form_input:focus {
-    background: #ffffff;
+	background: #ffffff;
 }
 
 .form_input_error {
-    color: var(--color-error)
+	color: var(--color-error);
 }
 
 .form_input_error_msg {
-    margin-top: 0.5rem;
-    font-size: 0.85rem;
-    color: var(--color-error)
+	margin-top: 0.5rem;
+	font-size: 0.85rem;
+	color: var(--color-error);
 }
 
 .form_button {
-    width: 100%;
-    padding: 0.6rem 2rem;
-    font-weight: bold;
-    font-size: 1rem;
-    color: #ffffff;
-    border: none;
-    border-radius: var(--border-radius);
-    outline: none;
-    cursor: pointer;
-    letter-spacing: 0.05rem;
+	width: 100%;
+	padding: 0.6rem 2rem;
+	font-weight: bold;
+	font-size: 1rem;
+	color: #ffffff;
+	border: none;
+	border-radius: var(--border-radius);
+	outline: none;
+	cursor: pointer;
+	letter-spacing: 0.05rem;
 }
 
 .form_button_bg {
-    background: hsla(217, 100%, 50%, 1);    
-    background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
-    background: -moz-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
-    background: -webkit-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );
+	background: hsla(217, 100%, 50%, 1);
+	background: linear-gradient(
+		90deg,
+		hsla(217, 100%, 50%, 1) 0%,
+		hsla(186, 100%, 69%, 1) 100%
+	);
+	background: -moz-linear-gradient(
+		90deg,
+		hsla(217, 100%, 50%, 1) 0%,
+		hsla(186, 100%, 69%, 1) 100%
+	);
+	background: -webkit-linear-gradient(
+		90deg,
+		hsla(217, 100%, 50%, 1) 0%,
+		hsla(186, 100%, 69%, 1) 100%
+	);
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 );
 }
 
 .form_button_bg:hover {
-    background: hsla(210, 90%, 80%, 1);
-    background: linear-gradient(90deg, hsla(210, 90%, 80%, 1) 0%, hsla(212, 93%, 49%, 1) 100%);    
-    background: -moz-linear-gradient(90deg, hsla(210, 90%, 80%, 1) 0%, hsla(212, 93%, 49%, 1) 100%);    
-    background: -webkit-linear-gradient(90deg, hsla(210, 90%, 80%, 1) 0%, hsla(212, 93%, 49%, 1) 100%);    
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#9FCCFA", endColorstr="#0974F1", GradientType=1 );    
+	background: hsla(210, 90%, 80%, 1);
+	background: linear-gradient(
+		90deg,
+		hsla(210, 90%, 80%, 1) 0%,
+		hsla(212, 93%, 49%, 1) 100%
+	);
+	background: -moz-linear-gradient(
+		90deg,
+		hsla(210, 90%, 80%, 1) 0%,
+		hsla(212, 93%, 49%, 1) 100%
+	);
+	background: -webkit-linear-gradient(
+		90deg,
+		hsla(210, 90%, 80%, 1) 0%,
+		hsla(212, 93%, 49%, 1) 100%
+	);
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#9FCCFA", endColorstr="#0974F1", GradientType=1 );
 }
 
 .form_button:active {
-    transform: scale(0.98);
+	transform: scale(0.98);
 }
 
 .form_link {
-    color: var(--color-link);
-    text-decoration: none;
-    cursor: pointer;
+	color: var(--color-link);
+	text-decoration: none;
+	cursor: pointer;
 }
 
 .form_link:hover {
-    text-decoration: underline;
+	text-decoration: underline;
 }
-    
